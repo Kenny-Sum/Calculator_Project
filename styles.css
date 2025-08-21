@@ -42,6 +42,12 @@ button {
     font-size: 50px;
 }
 
+button:hover {
+    background-color: aquamarine;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
 .blockCE {
     margin-left: 330px;
 }

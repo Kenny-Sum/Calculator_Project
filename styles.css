@@ -10,7 +10,7 @@ body {
     border: solid black 1px;
 }
 
-.display, .section_one, .section_two, .section_three, .section_four, .section_five{
+.display, .row{
     display: flex;
     gap: 10px;
     width: 430px;

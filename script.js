@@ -1,3 +1,15 @@
+const btn7 = document.querySelector("#btn7");
+
+btn7.addEventListener("click", () => {
+    const display = document.querySelector(".display");
+
+    const content = document.createElement("div");
+    content.classList.add("content");
+    content.textContent = "7";
+
+    display.appendChild(content);
+})
+
 function add(num1, num2){
     return num1 + num2 
 };

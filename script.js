@@ -11,40 +11,10 @@ const btn0 = document.querySelector("#btn0");
 const btnDot = document.querySelector("#btnDot");
 const btnClear = document.querySelector("#btnClear");
 
-btn7.addEventListener("click", () => {
-    const display = document.querySelector(".display");
-
-    display.textContent += "7";
-});
-
-btn8.addEventListener("click", () => {
-    const display = document.querySelector(".display");
-
-    display.textContent += "8";
-});
-
-btn9.addEventListener("click", () => {
+btn0.addEventListener("click", () => {
     const display = document.querySelector(".display");
     
-    display.textContent += "9";
-});
-
-btn4.addEventListener("click", () => {
-    const display = document.querySelector(".display");
-    
-    display.textContent += "4";
-});
-
-btn5.addEventListener("click", () => {
-    const display = document.querySelector(".display");
-    
-    display.textContent += "5";
-});
-
-btn6.addEventListener("click", () => {
-    const display = document.querySelector(".display");
-    
-    display.textContent += "6";
+    display.textContent += "0";
 });
 
 btn1.addEventListener("click", () => {
@@ -65,16 +35,48 @@ btn3.addEventListener("click", () => {
     display.textContent += "3";
 });
 
-btn0.addEventListener("click", () => {
+btn4.addEventListener("click", () => {
     const display = document.querySelector(".display");
     
-    display.textContent += "0";
+    display.textContent += "4";
 });
+
+btn5.addEventListener("click", () => {
+    const display = document.querySelector(".display");
+    
+    display.textContent += "5";
+});
+
+btn6.addEventListener("click", () => {
+    const display = document.querySelector(".display");
+    
+    display.textContent += "6";
+});
+
+btn7.addEventListener("click", () => {
+    const display = document.querySelector(".display");
+
+    display.textContent += "7";
+});
+
+btn8.addEventListener("click", () => {
+    const display = document.querySelector(".display");
+
+    display.textContent += "8";
+});
+
+btn9.addEventListener("click", () => {
+    const display = document.querySelector(".display");
+    
+    display.textContent += "9";
+});
+
 
 btnDot.addEventListener("click", () => {
     const display = document.querySelector(".display");
     
     display.textContent += ".";
+    
 });
 
 btnClear.addEventListener("click", () => {

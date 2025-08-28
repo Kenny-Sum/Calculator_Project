@@ -80,7 +80,7 @@ btnDot.addEventListener("click", () => {
 btnClear.addEventListener("click", () => {
     const display = document.querySelector(".display");
 
-    display.textContent === "";
+    display.textContent = "";
     
 });
 

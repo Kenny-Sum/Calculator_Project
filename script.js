@@ -20,44 +20,54 @@ const display = document.querySelector(".display");
 let num = "";
 let num1 = "";
 let num2 = "";
-let operator ="";
+let operator = "";
+let result = "";
 
 btn0.addEventListener("click", () => {
     display.textContent += "0";
+    num += "0"; 
 });
 
 btn1.addEventListener("click", () => {
     display.textContent += "1";
+    num += "1"; 
 });
 
 btn2.addEventListener("click", () => {
     display.textContent += "2";
+    num += "2"; 
 });
 
 btn3.addEventListener("click", () => {
     
     display.textContent += "3";
+    num += "3"; 
 });
 
 btn4.addEventListener("click", () => {
     
     display.textContent += "4";
+    num += "4"; 
 });
 
 btn5.addEventListener("click", () => {
     display.textContent += "5";
+    num += "5"; 
 });
 
 btn6.addEventListener("click", () => {
     display.textContent += "6";
+    num += "6"; 
 });
 
 btn7.addEventListener("click", () => {
     display.textContent += "7";
+    num += "7"; 
 });
 
 btn8.addEventListener("click", () => {
     display.textContent += "8";
+    num += "8"; 
 });
 
 btn9.addEventListener("click", () => {
@@ -67,41 +77,72 @@ btn9.addEventListener("click", () => {
 
 btnDot.addEventListener("click", () => {
     display.textContent += ".";
+    num += ".";
 });
 
 btnAdd.addEventListener("click", () => {
+    if(result){
+        num1 = result;
+    }else{
+        num1 = num;
+        num = "";
+    }
     display.textContent += "+";
     operator = "+";
-    num1 = num;
-    console.log("num1: " + num1);
-    num = "";
-
 });
 
 btnMinus.addEventListener("click", () => {
+    if(result){
+        num1 = result;
+    }else{
+        num1 = num;
+        num = "";
+    }
     display.textContent += "-";
-    
+    operator = "-";
 });
 
 btnMultiply.addEventListener("click", () => {
+    if(result){
+        num1 = result;
+    }else{
+        num1 = num;
+        num = "";
+    }
     display.textContent += "x";
-    
+    operator = "*";
 });
 
 btnDivide.addEventListener("click", () => {
+    if(result){
+        num1 = result;
+    }else{
+        num1 = num;
+        num = "";
+    }
     display.textContent += "/";
-    
+    operator = "/";
 });
 
 btnEqual.addEventListener("click", () =>{
     display.textContent = "";
-    num2 = Number(num);
-    num1 = Number(num1);
-    display.textContent = operate(num1, operator, num2);
+    num2 = parseFloat(num);
+    num1 = parseFloat(num1);
+    result = operate(num1, operator, num2);
+    display.textContent = result;
+    num = "";
+    num1 = "";
+    num2 = "";
+
 });
 
 btnClear.addEventListener("click", () => {
     display.textContent = "";
+    num = "";
+    result = "";
+    num1 = "";
+    num2 = "";
+    operator = "";
 });
 
 

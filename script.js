@@ -81,17 +81,36 @@ btnDot.addEventListener("click", () => {
 });
 
 btnAdd.addEventListener("click", () => {
+    if(operator){
+        num2 = parseFloat(num);
+        num1 = parseFloat(num1);
+        result = operate(num1, operator, num2);
+        display.textContent = result;
+        num1 = result;
+        num2 = "";
+        num = "";
+    }
     if(result){
         num1 = result;
+        display.textContent += "+";
     }else{
         num1 = num;
         num = "";
+        display.textContent += "+";
     }
-    display.textContent += "+";
     operator = "+";
 });
 
 btnMinus.addEventListener("click", () => {
+    if(operator){
+        num2 = parseFloat(num);
+        num1 = parseFloat(num1);
+        result = operate(num1, operator, num2);
+        display.textContent = result;
+        num1 = result;
+        num2 = "";
+        num = "";
+    }
     if(result){
         num1 = result;
     }else{
@@ -103,6 +122,15 @@ btnMinus.addEventListener("click", () => {
 });
 
 btnMultiply.addEventListener("click", () => {
+    if(operator){
+        num2 = parseFloat(num);
+        num1 = parseFloat(num1);
+        result = operate(num1, operator, num2);
+        display.textContent = result;
+        num1 = result;
+        num2 = "";
+        num = "";
+    }
     if(result){
         num1 = result;
     }else{
@@ -114,6 +142,15 @@ btnMultiply.addEventListener("click", () => {
 });
 
 btnDivide.addEventListener("click", () => {
+    if(operator){
+        num2 = parseFloat(num);
+        num1 = parseFloat(num1);
+        result = operate(num1, operator, num2);
+        display.textContent = result;
+        num1 = result;
+        num2 = "";
+        num = "";
+    }
     if(result){
         num1 = result;
     }else{
@@ -133,6 +170,7 @@ btnEqual.addEventListener("click", () =>{
     num = "";
     num1 = "";
     num2 = "";
+    operator = "";
 
 });
 

@@ -26,7 +26,11 @@ body {
     margin-top: 10px;
     border: solid black 1px;
     background-color: white;
-
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    font-size: 40px;
+    margin-right: 10px;
 }
 
 .section_one {

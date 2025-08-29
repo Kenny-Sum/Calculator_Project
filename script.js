@@ -13,80 +13,83 @@ const btnAdd = document.querySelector("#btnAdd");
 const btnMinus = document.querySelector("#btnMinus");
 const btnMultiply = document.querySelector("#btnMultiply");
 const btnDivide = document.querySelector("#btnDivide");
+const btnEqual = document.querySelector("#btnEqual");
 const btnClear = document.querySelector("#btnClear");
+const display = document.querySelector(".display");
 
-let value = 0;
+let input = "";
+let num = "";
+let num1 = "";
+let num2 = "";
+let operator ="";
 
 btn0.addEventListener("click", () => {
     const display = document.querySelector(".display");
+    input += "0";
     
-    display.textContent += "0";
-    const value =+ 0;
+    display.textContent = input;
+    console.log(input);
 });
 
 btn1.addEventListener("click", () => {
     const display = document.querySelector(".display");
+    input += "1";
     
-    display.textContent += "1";
-    const value =+ 1;
+    display.textContent = input;
+    num = display.textContent;
 });
 
 btn2.addEventListener("click", () => {
     const display = document.querySelector(".display");
     
     display.textContent += "2";
-    const value =+ 2;
+    let num1 =+ display.textContent;
+    console.log(num1);
 });
 
 btn3.addEventListener("click", () => {
     const display = document.querySelector(".display");
     
     display.textContent += "3";
-    const value =+ 3;
 });
 
 btn4.addEventListener("click", () => {
     const display = document.querySelector(".display");
     
     display.textContent += "4";
-    const value =+ 4;
 });
 
 btn5.addEventListener("click", () => {
     const display = document.querySelector(".display");
     
     display.textContent += "5";
-    const value =+ 5;
 });
 
 btn6.addEventListener("click", () => {
     const display = document.querySelector(".display");
     
     display.textContent += "6";
-    const value =+ 6;
 });
 
 btn7.addEventListener("click", () => {
     const display = document.querySelector(".display");
 
     display.textContent += "7";
-    const value =+ 7;
+
 });
 
 btn8.addEventListener("click", () => {
     const display = document.querySelector(".display");
 
     display.textContent += "8";
-    const value =+ 8;
-    console.log(value)
 });
 
 btn9.addEventListener("click", () => {
     const display = document.querySelector(".display");
-    
     display.textContent += "9";
-    const value =+ 9;
-    console.log(value)
+    num += "9"; 
+    console.log("current number: " + num);
+    
 });
 
 btnDot.addEventListener("click", () => {
@@ -98,9 +101,12 @@ btnDot.addEventListener("click", () => {
 
 btnAdd.addEventListener("click", () => {
     const display = document.querySelector(".display");
-    
     display.textContent += "+";
-    
+    operator = "+";
+    num1 = num;
+    console.log("num1: " + num1);
+    num = "";
+
 });
 
 btnMinus.addEventListener("click", () => {
@@ -122,6 +128,19 @@ btnDivide.addEventListener("click", () => {
     
     display.textContent += "/";
     
+});
+
+btnEqual.addEventListener("click", () =>{
+    display.textContent = "";
+    num2 = Number(num);
+    console.log("num2: " + num2);
+    num1 = Number(num1);
+    console.log("num1: " + num1);
+    operator = operator;
+    display.textContent = operate(num1, operator, num2);
+    console.log(operate(num1, operator, num2));
+    
+
 });
 
 btnClear.addEventListener("click", () => {
